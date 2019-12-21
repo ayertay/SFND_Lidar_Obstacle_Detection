@@ -4,7 +4,7 @@
 
 #include "sensors/lidar.h"
 #include "render/render.h"
-#include "processPointClouds.h"
+#include "processPointClouds.hpp"
 // using templates for processPointClouds so also include .cpp to help linker
 //#include "processPointClouds.cpp"
 
@@ -173,7 +173,7 @@ void initCamera(CameraAngle setAngle, pcl::visualization::PCLVisualizer::Ptr& vi
 
 int main (int argc, char** argv)
 {
-    /*std::cout << "starting enviroment" << std::endl;
+    std::cout << "starting enviroment" << std::endl;
 
     pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("3D Viewer"));
     CameraAngle setAngle = XY;
@@ -192,7 +192,7 @@ int main (int argc, char** argv)
     {
         viewer->spinOnce ();
     }*/
-    /*while (!viewer->wasStopped ())
+    while (!viewer->wasStopped ())
     {
 
         // Clear viewer
@@ -208,10 +208,10 @@ int main (int argc, char** argv)
             streamIterator = stream.begin();
 
         viewer->spinOnce ();
-    }*/
+    }
 
     //For testing
-    std::cout << "starting enviroment" << std::endl;
+    /*std::cout << "starting enviroment" << std::endl;
 
     pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("3D Viewer"));
     CameraAngle setAngle = XY;
@@ -221,5 +221,5 @@ int main (int argc, char** argv)
     while (!viewer->wasStopped ())
     {
         viewer->spinOnce ();
-    } 
+    } */
 }
